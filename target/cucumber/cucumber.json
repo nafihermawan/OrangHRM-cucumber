@@ -1,0 +1,190 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 19588504443,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "User input invalid credential",
+        "description": "",
+        "id": "login;user-input-invalid-credential",
+        "after": [
+          {
+            "result": {
+              "duration": 416127,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 845814658,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user open the web page",
+            "match": {
+              "location": "LoginStep.loginOrangeHRM()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2930444267,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user input \"Admin\" as username and \"admin\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Admin",
+                  "offset": 12
+                },
+                {
+                  "val": "admin",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginStep.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 124821326,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user see error message",
+            "match": {
+              "location": "LoginStep.errorMassage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@NegativeLogin"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 15377955341,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "username and password match",
+        "description": "",
+        "id": "login;username-and-password-match",
+        "after": [
+          {
+            "result": {
+              "duration": 73242,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 131471429,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user open the web page",
+            "match": {
+              "location": "LoginStep.loginOrangeHRM()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7260468488,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user input \"admin\" as username and \"admin123\" as password",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 12
+                },
+                {
+                  "val": "admin123",
+                  "offset": 36
+                }
+              ],
+              "location": "LoginStep.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164992984,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user see dashboard page",
+            "match": {
+              "location": "LoginStep.loginSucces()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@PositiveLogin"
+          }
+        ]
+      }
+    ],
+    "name": "Login",
+    "description": "",
+    "id": "login",
+    "keyword": "Feature",
+    "uri": "features/Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Login"
+      },
+      {
+        "line": 1,
+        "name": "@Dev"
+      }
+    ]
+  }
+]

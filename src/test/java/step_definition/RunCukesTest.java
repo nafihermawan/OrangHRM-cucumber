@@ -7,10 +7,11 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = {"@Login"},
-		features = {"classpath:features/"},
-		glue = { "classpath:step_definitions"},
-		plugin = {"pretty", "html:target/cucumber-html-report.html","json:target/cucumber.json", "html:target/cucumber-reports"}
+		tags = {"@Dev"},
+		features = {"classpath:features"},
+		glue = { "classpath:step_definition"},
+		plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}		
+		
 		)
 public class RunCukesTest{
 	

@@ -11,7 +11,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hooks {
-	public static WebDriver driver;
+	public static WebDriver webDriver;
 
 	@Before
 	/**
@@ -21,10 +21,9 @@ public class Hooks {
 	public void openBrowser() throws MalformedURLException {
 		System.out.println("Called openBrowser");
 		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().deleteAllCookies();
-		
-		driver.get("https://www.google.com/?hl=id");
+		webDriver = new ChromeDriver();
+		webDriver.manage().deleteAllCookies();
+		webDriver.get("https://opensource-demo.orangehrmlive.com/");
        // driver.manage().window().maximize();
 	}
 

@@ -9,14 +9,13 @@ public class BaseClass {
 	public BaseClass(WebDriver webDriver) {
 		BaseClass.webDriver = webDriver;
 	}
-	
+
 	public void click(WebElement webElement) {
 		webElement.click();
 	}
-	
+
 	public void input(WebElement webElement, String text) {
-		webElement.clear();
 		webElement.sendKeys(text);
 	}
-	
+
 }

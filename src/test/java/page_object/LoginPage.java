@@ -15,23 +15,26 @@ public class LoginPage extends BaseClass{
 	}
 
 	@FindBy(id = "txtUsername")
-	WebElement inputUsername;
+	private WebElement inputUsername;
 
 	@FindBy(id = "txtPassword")
-	WebElement inputPassword;
+	private WebElement inputPassword;
 
 	@FindBy(id = "btnLogin")
-	WebElement btnLogin;
+	private WebElement btnLogin;
+	
+	@FindBy(id = "logInPanelHeading")
+	private WebElement loginPanel;
 
 	@FindBy(id = "spanMessage")
-	WebElement errorMessage;
+	private WebElement errorMessage;
 
 	public void setUsername(String username) {
 		inputUsername.sendKeys(username);
 	}
 
-	public void setPassword(String password) {
-		inputPassword.sendKeys(password);
+	public void setPassword(String username) {
+		inputPassword.sendKeys(username);
 	}
 
 	public void clickLogin() {
@@ -42,8 +45,9 @@ public class LoginPage extends BaseClass{
 		return errorMessage.getText();
 	}
 
-	public boolean isDisplayed() {
-		return false;
+	public boolean isDisplayed()
+	{
+		return loginPanel.isDisplayed();
 	}
 
 }
